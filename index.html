@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cliff Owl</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <canvas id="gameCanvas" aria-label="Cliff Owl game screen"></canvas>
+
+    <section class="hud hud-top" aria-label="game status">
+      <div class="meter">
+        <span class="hud-label">DIST</span>
+        <strong id="distanceText">0m</strong>
+      </div>
+      <div class="meter">
+        <span class="hud-label">SCORE</span>
+        <strong id="scoreText">0</strong>
+      </div>
+      <div class="meter">
+        <span class="hud-label">BEST</span>
+        <strong id="bestText">0</strong>
+      </div>
+    </section>
+
+    <section class="skill-bar" aria-label="skill slots">
+      <button class="skill-slot" data-key="Q" type="button"><span>Q</span></button>
+      <button class="skill-slot" data-key="W" type="button"><span>W</span></button>
+      <button class="skill-slot" data-key="E" type="button"><span>E</span></button>
+      <button class="skill-slot" data-key="R" type="button"><span>R</span></button>
+    </section>
+
+    <section class="overlay is-visible" id="startOverlay" aria-live="polite">
+      <div class="title-mark">부엉이의 모험</div>
+      <button id="startButton" class="primary-action" type="button">START</button>
+    </section>
+
+    <section class="overlay" id="gameOverOverlay" aria-live="polite">
+      <div class="title-mark danger">CRASH</div>
+      <p id="resultText" class="result-text">0m / 0</p>
+      <button id="restartButton" class="primary-action" type="button">RESTART</button>
+    </section>
+  </main>
+
+  <script src="./game.js"></script>
+</body>
+</html>
